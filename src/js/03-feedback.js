@@ -25,9 +25,9 @@ function checkLocalStorage () {
   const feedbackFromStorage = localStorage.getItem("feedback-form-state")
   if (feedbackFromStorage !== null)
   try {
-    feedback = JSON.parse(feedbackFromStorage);
-    !feedback.email ? '' : form[0].value = feedback.email
-    !feedback.message ? '' : form[1].value = feedback.message
+    const startFeedback = JSON.parse(feedbackFromStorage);
+    !startFeedback.email ? '' : form[0].value = startFeedback.email
+    !startFeedback.message ? '' : form[1].value = startFeedback.message
   } catch (error) {
     console.error("Get state error: ", error.message);
   }
