@@ -5,7 +5,7 @@ let feedback = {}
 
 function addFeedback (e) {
   if (e.target.value.trim() !== "") {
-    feedback[e.target.name] = e.target.value.trim()
+    feedback[e.target.name] = e.target.value
     try {
       localStorage.setItem("feedback-form-state", JSON.stringify(feedback));
     } catch (error) {
