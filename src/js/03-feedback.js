@@ -30,7 +30,7 @@ function onFormSubmit (e) {
 function checkLocalStorage () {
   if (feedbackFromStorage !== null)
   try {
-    !feedback.email ? '1' : form[0].value = feedback.email
+    !feedback.email ? '' : form[0].value = feedback.email
     !feedback.message ? '' : form[1].value = feedback.message
   } catch (error) {
     console.error("Get state error: ", error.message);
